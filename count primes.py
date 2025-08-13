@@ -1,0 +1,12 @@
+n=int(input())#30
+primeArray=[1]*n
+for ind in range(2,int(n**0.5)+1):
+    if(primeArray[ind]==1):
+        #range(4,30,2)
+        for i in range(ind*ind,n,ind):
+            primeArray[i]=0
+count=0
+for i in range(2,n):
+    if(primeArray[i]==1):
+        count+=1
+print(count)
